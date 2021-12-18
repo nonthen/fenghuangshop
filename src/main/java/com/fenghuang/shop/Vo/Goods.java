@@ -2,6 +2,10 @@ package com.fenghuang.shop.Vo;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 //商品实体类
 public class Goods {
     private int gid;
@@ -43,7 +47,18 @@ public class Goods {
         return gimg;
     }
 
-    public void setGimg(byte[] gimg) {
+    public void setGimg(byte[] gimg){
+        //因为图片是以MultipartFile形式上传，所以要将MultipartFile转变成byte型
+        //将文件图片转为byte类型
+//        InputStream ins = Image.getInputStream();
+//        byte[] buffer=new byte[1024];
+//        int len=0;
+//        ByteArrayOutputStream bos=new ByteArrayOutputStream();
+//        while((len=ins.read(buffer))!=-1){
+//            bos.write(buffer,0,len);
+//        }
+//        bos.flush();
+//        gimg = bos.toByteArray();
         this.gimg = gimg;
     }
 

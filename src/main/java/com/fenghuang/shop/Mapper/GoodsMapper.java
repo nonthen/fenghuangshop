@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface GoodsMapper {
 
-    @Insert("insert into goods (gname,gprice,gdesc,gnum,gimg)values(#{goods.gname},#{goods.gprice},#{goods.gdesc},#{goods.gnum}),#{goods.gimg}")
+    @Insert("insert into goods (gname,gprice,gdesc,gnum,gimg)values(#{goods.gname},#{goods.gprice},#{goods.gdesc},#{goods.gnum},#{goods.gimg})")
     void addgoods(@Param("goods") Goods goods);
 
 }

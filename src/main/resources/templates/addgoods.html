@@ -512,7 +512,7 @@
                                             </a>
                                         </div>
 
-                                        <form action="/addgoods" method="post">
+                                        <form action="/addgoods" method="post" enctype="multipart/form-data">
                                             <h3>商品图片:</h3>
                                             <input type="file" id="Image" name="Image"/>
                                             <h3>商品名称：</h3>
@@ -523,9 +523,13 @@
                                             <input type="float" id="gdesc" name="gdesc" placeholder="请输入商品描述" />
                                             <h3>商品数量：</h3>
                                             <input type="int" id="gnum" name="gnum" placeholder="请输入商品的数量" />
+
                                             <div class="button-box" >
-                                                <button type="submit" ><span>发布商品</span></button>
+                                                <button type="submit" style="display:block;margin:0 auto">
+                                                    <span>发布商品</span>
+                                                </button>
                                             </div>
+
                                         </form>
                                     </div>
                                 </div>
